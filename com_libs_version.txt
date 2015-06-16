@@ -1,0 +1,7 @@
+Version 1.0.0 Cross (10_02_10) 
+
+Description: 
+	QNX - Linux crossplatform version for Lornet project.
+	It's C based library.
+	It doesn't need specific defifnitions. 
+	Crossplatforming is realised by using POSIX standart interface 
