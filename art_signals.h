@@ -10,7 +10,7 @@ using std:: endl;
 using std::vector;
 
 //If "sigev_notify_thread_id" isn't declared then add this string to  /usr/include/bits/siginfo.h
-//#define sigev_notify_thread_id _sigev_un._tid
+#define sigev_notify_thread_id _sigev_un._tid
 
 class ArtRTSignals
 {
@@ -96,7 +96,8 @@ public:
 		event.sigev_notify = SIGEV_THREAD_ID;
 		event.sigev_signo = ArtRTSignals::getSignal();
 		event.sigev_value.sival_int = 0;
-		event.sigev_notify_thread_id = thread_id_init;
+//		event.sigev_notify_thread_id = thread_id_init;
+    event._sigev_un._tid = thread_id_init;
 	#endif	
 	return ;	
 	}	
